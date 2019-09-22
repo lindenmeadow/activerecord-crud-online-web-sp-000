@@ -23,13 +23,14 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = title)
+def can_be_created_in_a_block(args = "Home Alone", 1990)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
 
   Movie.create do |m|
-    m.title = "Home Alone"
+    m.title
+    m.release_date
   end
 end
 
